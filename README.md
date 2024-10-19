@@ -1,6 +1,6 @@
 # React-Notyfy
 
-A customizable React toast notification library designed to enhance user interaction with easy-to-use, lightweight, and reusable components. This library allows you to display success, error, warning, and info messages in your React applications with style.
+A customizable React toast notification library designed to enhance user interaction with easy-to-use, lightweight, and reusable components. This library allows you to display success, info, warning and error messages along with three different animation i.e. fade, pop and slide in your React applications.
 
 # Table of Contents
 1. [Features](#Features)
@@ -11,9 +11,9 @@ A customizable React toast notification library designed to enhance user interac
 6. [License](#License)
 
 # Features
-🔔 Customizable: Easily customize duration and position.  
+🔔 Customizable: Easily customize duration, position and Animation.  
 🚀 Lightweight: Minimal overhead for fast and responsive performance.  
-🎨 Stylish: Supports different types of notifications like success, error, info, and warning.  
+🎨 Stylish: Supports different types of notifications like success, info, warning and error along with three different types of animations like fade, pop and slide.  
 🧩 Reusable: Designed with reusable components for seamless integration.
 
 # Installation
@@ -39,7 +39,7 @@ function App() {
       type: 'success',
       message: 'This is a success toast!',
       duration: 3000,
-      position: 'top-right',
+      animation: "pop",
     });
   };
 
@@ -63,6 +63,8 @@ export default App;
 | `type`      | `string` | Type of the toast (`'success'`, `'error'`, `'info'`, `'warning'`). |
 | `message`   | `string` | Message to display in the toast.                     |
 | `duration`  | `number` | Duration (in milliseconds) before the toast disappears. |
+| `animation` | `string` | Types of animation (`'pop'`, `'slide'`, `'fade'`).   |
+
 
 # Examples
 Here are a few examples of how you can use react-notyfy:
@@ -74,6 +76,7 @@ triggerNotification({
   type: 'success',
   message: 'Data saved successfully!',
   duration: 5000,
+  animation: "pop",
 });
 ```
 
@@ -84,6 +87,7 @@ triggerNotification({
   type: 'info',
   message: 'Please check for more information..!',
   duration: 4000,
+  animation: "fade",
 });
 ```
 
@@ -94,6 +98,7 @@ triggerNotification({
   type: 'warning',
   message: 'Warning toast',
   duration: 5000,
+  animation: "slide",
 });
 ```
 
@@ -104,6 +109,7 @@ triggerNotification({
   type: 'error',
   message: 'Something went wrong, please try again!',
   duration: 4000,
+  animation: "pop",
 });
 ```
 
